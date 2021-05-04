@@ -1,0 +1,149 @@
+table {
+  border-spacing: 0.5rem;
+}
+td {
+  padding: 0.5rem;
+}
+
+td:nth-child(1) { background: hsl(150, 50%, 50%); }
+td:nth-child(2) { background: hsl(160, 60%, 50%); }
+td:nth-child(3) { background: hsl(170, 70%, 50%); }
+td:nth-child(4) { background: hsl(180, 80%, 50%); }
+td:nth-child(5) { background: hsl(190, 90%, 50%); }
+td:nth-child(6) { background: hsl(200, 99%, 50%); }
+
+
+<table class="calc">
+   
+    <tr>
+        <input type="text" id="result">  
+    </tr>
+        <tr class= "fstrow">
+            <td><input type ="button" value="1" onclick="dis ('1')"></td>
+            <td><input type ="button" value="2" onclick="dis ('2')"></td>
+            <td><input type ="button" value="3" onclick="dis ('3')"></td>
+            <td><input type ="button" value="+" onclick="dis ('+')"></td>
+        </tr>
+
+        <tr class="sndrow">
+            <td><input type ="button" value="4" onclick="dis ('4')"></td>
+            <td><input type ="button" value="5" onclick="dis ('5')"></td>
+            <td><input type ="button" value="6" onclick="dis ('6')"></td>
+            <td><input type ="button" value="-" onclick="dis ('-')"></td>
+        </tr>
+
+        <tr class="trdrow">
+            <td><input type ="button" value="7" onclick="dis ('1')"></td>
+            <td><input type ="button" value="8" onclick="dis ('2')"></td>
+            <td><input type ="button" value="9" onclick="dis ('3')"></td>
+            <td><input type ="button" value="x" onclick="dis ('*')"></td>
+        </tr>
+
+        <tr class="frthrow">
+            <td><input type ="button" value="/" onclick="dis ('/')"></td>
+            <td><input type ="button" value="0" onclick="dis ('0')"></td>
+            <td><input type ="button" value="=" onclick="solve()" id="equals" style= "width: 190%"></td>
+        </tr>
+</table>
+
+    <tr>
+        <input type="text" id="result">  
+    </tr>
+
+    <div class="row">
+        <div class="col-sm-3" input type ="button" value="1" onclick="dis ('1') "background-color:lavender;">1</div>
+        <div class="col-sm-3" input type ="button" value="1" onclick="dis ('2') "background-color:lavender;">2</div>
+        <div class="col-sm-3" input type ="button" value="1" onclick="dis ('3') "background-color:lavender;">3</div>
+        <div class="col-sm-3" input type ="button" value="+" onclick="dis ('+') "background-color:lavender;">+</div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3" input type ="button" value="4" onclick="dis ('4') "background-color:lavender;">4</div>
+        <div class="col-sm-3" input type ="button" value="5" onclick="dis ('5') "background-color:lavender;">5</div>
+        <div class="col-sm-3" input type ="button" value="6" onclick="dis ('6') "background-color:lavender;">6</div>
+        <div class="col-sm-3" input type ="button" value="-" onclick="dis ('-') "background-color:lavender;">-</div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3" input type ="button" value="7" onclick="dis ('7') "background-color:lavender;">7</div>
+        <div class="col-sm-3" input type ="button" value="8" onclick="dis ('8') "background-color:lavender;">8</div>
+        <div class="col-sm-3" input type ="button" value="9" onclick="dis ('9') "background-color:lavender;">9</div>
+        <div class="col-sm-3" input type ="button" value="/" onclick="dis ('/') "background-color:lavender;">/</div>
+    </div>
+
+    <div class="row">
+        <div class="col" input type ="button" value="*" onclick="dis ('*') "background-color:lavender;">X</div>
+        <div class="col" input type ="button" value="0" onclick="dis ('0') "background-color:lavender;">0</div>
+        <div class="col" input type ="button" value="=" onclick="solve()" id="equals" style= "width: 190%" background-color:lavender;>=</div>
+    </div>
+
+</div>
+
+
+
+
+    <div class="game-container">
+		<div class="game-board">
+			<div>
+				<div class="square" index= "0" id="0"><span></span></div>
+				<div class="square" index= "1" id="1"><span></span></div>
+				<div class="square" index= "2" id="2"><span></span></div>
+			</div>
+			<div>
+				<div class="square" index= "3" id="3"><span></span></div>
+				<div class="square" index= "4" id="4"><span></span></div>
+				<div class="square" index= "5" id="5"><span></span></div>
+			</div>
+			<div>
+				<div class="square" index= "6" id="6"><span></span></div>
+				<div class="square" index= "7" id="7"><span></span></div>
+				<div class="square" index= "8" id="8"><span></span></div>
+			</div>
+		</div>
+	</div>
+
+
+
+    .square {
+    width: 100px;
+    height: 100px;
+    font-size: 64px;
+    display: inline-block;
+    border: 1px solid black;
+    vertical-align: top;
+    text-align: center;
+    line-height: 150%;
+    background-color: white;
+}
+
+.square span {
+    opacity: 0;
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+    font-size: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: cornflowerblue;
+}
+
+.game-board {
+    position: absolute;
+    top: 50px;
+    left: 47px;
+    display: inline-block;
+}
